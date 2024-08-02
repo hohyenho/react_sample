@@ -1,0 +1,105 @@
+@charset "utf-8";
+#site{
+    .site_inner{
+        padding: 16px;
+
+        .site_title{
+            position: sticky;
+            top: 70px;
+            left: 0;
+            width: 70%;
+            height: 5vw;
+            font-size: 4vw;
+            font-weight: 900;
+            line-height: 1.6;
+            font-family: var(--mainKor-font);
+            text-transform: uppercase;
+            color: var(--black100);
+            border-bottom: 0.4vw solid var(--black100);
+            margin-bottom: 100px;
+
+            em{
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+        .site_wrap{
+
+            .site_item{
+                height: 70vh;
+                @include flex_center;
+                flex-direction: column;
+                position: sticky;
+                left: 0;
+
+                &.s1{ 
+                    background-color: var(--subBg100);
+                    top: 180px;
+                }
+                &.s2{ 
+                    background-color: var(--subBg200);
+                    top: 200px;
+                }
+                &.s3{ 
+                    background-color: var(--subBg300);
+                    top: 220px;
+                }
+                &.s4{ 
+                    background-color: var(--subBg400);
+                    top: 240px;
+                }
+
+                .num{
+                    font-size: 5vw;
+                    line-height: 1;
+                    font-weight: 900;
+                    font-family: var(--mainNum-font);
+                    position: absolute;
+                    left: 1vw;
+                    top: 1vw;
+                }
+                .text{
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+                .title{
+                    font-family: var(--mainKor-fon);
+                    margin-bottom: 16px;
+                }
+                .btn{
+                    a{
+                        text-decoration: underline;
+                        color: var(--black200);
+                        font-size: 16px;
+                        margin: 0 2px;
+
+                        &:hover{
+                            font-weight: 800;
+                        }
+                    }
+                }
+                .info{
+                    width: 98%;
+                    margin-left: 1%;
+                    border-top: 1px solid var(--black);
+                    border-bottom: 1px solid var(--black);
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 0;
+                    bottom: 3%;
+
+                    @media(max-width:800px){
+                        flex-direction: column;
+                        padding-left: 5%;
+                    }
+                    span{
+                        padding: 3px 0;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
